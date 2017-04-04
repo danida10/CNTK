@@ -119,10 +119,9 @@ ParameterTensor = _make_tensor_meta('ParameterTensor', is_sparse=False , dynamic
 '''
 Meta class to denote a parameter tensor (no batch axis). Use with dimensions, e.g. ``ParameterTensor[512,256]``.
 '''
+
+# Meta class to denote a data tensor (with batch axis) with unspecified dimensions.
 tensor = Tensor[-2] # TODO: find the correct symbol for the sentinel value
-'''
-Meta class to denote a data tensor (with batch axis) with unspecified dimensions.
-'''
 
 def _make_seq_meta(cls_name, axes):
     class SeqMeta(type):
